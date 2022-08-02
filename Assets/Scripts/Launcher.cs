@@ -64,7 +64,7 @@ public class Launcher : MonoBehaviourPunCallbacks
         _isConnected = false;
         _loginButtonText.text = "Disconnected";
         _loginButtonText.color = Color.red;
-        Debug.Log("Disconnected.");
+        Debug.Log("Disconnected. Check connect: " + PhotonNetwork.IsConnected);
     }
 
     private void OnDestroy()
