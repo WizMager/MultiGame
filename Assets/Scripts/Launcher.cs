@@ -39,6 +39,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     private void Connect()
     {
         _loginButtonText.text = "Connect...";
+        _loginButtonText.color = Color.white;
         if (PhotonNetwork.IsConnected)
             return;
 
