@@ -7,7 +7,7 @@ using Button = UnityEngine.UI.Button;
 
 public class Launcher : MonoBehaviourPunCallbacks
 {
-    [SerializeField] private Button _loginButton; 
+    //[SerializeField] private Button _loginButton; 
     private TextMeshProUGUI _loginButtonText;
     private bool _isConnected;
     
@@ -18,9 +18,9 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     private void Start()
     {
-        _loginButtonText = _loginButton.GetComponentInChildren<TextMeshProUGUI>();
-        _loginButtonText.text = "Login";
-        _loginButton.onClick.AddListener(LoginButton);
+        //_loginButtonText = _loginButton.GetComponentInChildren<TextMeshProUGUI>();
+        //_loginButtonText.text = "Login";
+        //_loginButton.onClick.AddListener(LoginButton);
         //Connect();
     }
 
@@ -70,6 +70,6 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     private void OnDestroy()
     {
-        _loginButton.onClick.RemoveListener(LoginButton);
+        //_loginButton.onClick.RemoveListener(LoginButton);
     }
 }

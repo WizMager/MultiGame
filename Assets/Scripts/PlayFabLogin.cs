@@ -1,4 +1,5 @@
-﻿using PlayFab;
+﻿using System;
+using PlayFab;
 using PlayFab.ClientModels;
 using TMPro;
 using UnityEngine;
@@ -6,6 +7,8 @@ using UnityEngine;
 public class PlayFabLogin : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _loginLabel;
+    private const string AuthorizedKey = "AuthorizedKey";
+
     private void Start()
     {
         _loginLabel.text = "Login...";
@@ -14,12 +17,19 @@ public class PlayFabLogin : MonoBehaviour
             PlayFabSettings.staticSettings.TitleId = "28CE7";
         }
 
+        var needCreation = PlayerPrefs.HasKey(AuthorizedKey);
+        var id = PlayerPrefs.GetString(AuthorizedKey, Guid.NewGuid().ToString());
+        
         var request = new LoginWithCustomIDRequest
         {
-            CustomId = "CustomId",
-            CreateAccount = true
+            CustomId = id,
+            CreateAccount = needCreation
         };
-        PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnLoginError);
+        PlayFabClientAPI.LoginWithCustomID(request, result =>
+        {
+            PlayerPrefs.SetString(AuthorizedKey, id);
+            OnLoginSuccess(result);
+        }, OnLoginError);
     }
 
     private void OnLoginSuccess(LoginResult result)

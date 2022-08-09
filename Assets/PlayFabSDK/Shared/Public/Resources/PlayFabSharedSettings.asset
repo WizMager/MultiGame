@@ -15,7 +15,7 @@ MonoBehaviour:
   TitleId: 28CE7
   DeveloperSecretKey: J7G6T3FYGWIPSX1ISWQPUG834NTYCUTSD8XB14KXC3T8QSWEQX
   ProductionEnvironmentUrl: 
-  RequestType: 2
+  RequestType: 0
   DisableDeviceInfo: 0
   DisableFocusTimeCollection: 0
   RequestTimeout: 2000
