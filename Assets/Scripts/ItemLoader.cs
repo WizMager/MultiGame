@@ -23,7 +23,7 @@ public class ItemLoader : MonoBehaviour
        {
               foreach (var item in catalog)
               {
-                     text.text += $"ID: {item.ItemId}, name: {item.DisplayName} \n";
+                     text.text += $"ID: {item.ItemId}, name: {item.DisplayName}\n";
                      Debug.Log($"ID: {item.ItemId}, name: {item.DisplayName}");
               }
        }

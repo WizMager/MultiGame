@@ -1,0 +1,513 @@
+{
+  "CatalogVersion": "main",
+  "Catalog": [
+    {
+      "ItemId": "wood_sword",
+      "ItemClass": "sword",
+      "CatalogVersion": "main",
+      "DisplayName": "Wood Sword",
+      "Description": "Simple sword.",
+      "VirtualCurrencyPrices": {
+        "SC": 100
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "weapon",
+        "sword"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "iron_sword",
+      "ItemClass": "sword",
+      "CatalogVersion": "main",
+      "DisplayName": "Iron Sword",
+      "Description": "Stronger than wood sword. You can beat somebody with it.",
+      "VirtualCurrencyPrices": {
+        "SC": 500
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "sword",
+        "weapon"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "titanium_sword",
+      "ItemClass": "sword",
+      "CatalogVersion": "main",
+      "DisplayName": "Titanium Sword",
+      "Description": "Perfect sword with very sharp and strong blade.",
+      "VirtualCurrencyPrices": {
+        "SC": 1000
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "sword",
+        "weapon"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "wood_armor",
+      "ItemClass": "armor",
+      "CatalogVersion": "main",
+      "DisplayName": "Wood Armor",
+      "Description": "Simple and not durable set of armor.",
+      "VirtualCurrencyPrices": {
+        "SC": 100
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "armor",
+        "protect"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "iron_armor",
+      "ItemClass": "armor",
+      "CatalogVersion": "main",
+      "DisplayName": "Iron Armor",
+      "Description": "Basic armor set which can protect from not very hight damage.",
+      "VirtualCurrencyPrices": {
+        "SC": 500
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "armor",
+        "protect"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "titanium_armor",
+      "ItemClass": "armor",
+      "CatalogVersion": "main",
+      "DisplayName": "Titanium Armor",
+      "Description": "This very strong armor can protect from almost all damage.",
+      "VirtualCurrencyPrices": {
+        "SC": 1000
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "armor",
+        "protect"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "wood_shield",
+      "ItemClass": "shield",
+      "CatalogVersion": "main",
+      "DisplayName": "Wood Shield",
+      "Description": "Simple shield which was a fence and now can protect you from few punch or arrows.",
+      "VirtualCurrencyPrices": {
+        "SC": 100
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "shield",
+        "protect"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "iron_shield",
+      "ItemClass": "shield",
+      "CatalogVersion": "main",
+      "DisplayName": "Iron Shield",
+      "Description": "Good shield which can reflect arrows and protect you from not very strong hits.",
+      "VirtualCurrencyPrices": {
+        "SC": 500
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "shield",
+        "protect"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "titanium_shield",
+      "ItemClass": "shield",
+      "CatalogVersion": "main",
+      "DisplayName": "Titanium Shield",
+      "Description": "Perfect shield which can protect you from almost all damage.",
+      "VirtualCurrencyPrices": {
+        "SC": 1000
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "shield",
+        "protect"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "wood_bow",
+      "ItemClass": "bow",
+      "CatalogVersion": "main",
+      "DisplayName": "Wood Bow",
+      "Description": "Bow wihich shoot bows.",
+      "VirtualCurrencyPrices": {
+        "SC": 300
+      },
+      "RealCurrencyPrices": null,
+      "Tags": [
+        "bow",
+        "weapon"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "iron_crossbow",
+      "ItemClass": "crossbow",
+      "CatalogVersion": "main",
+      "DisplayName": "Iron Crossbow",
+      "Description": "Crossbow which shoot with bolts.",
+      "VirtualCurrencyPrices": {
+        "SC": 700
+      },
+      "RealCurrencyPrices": null,
+      "Tags": [
+        "crossbow",
+        "weapon"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "desert_eagle_pistol",
+      "ItemClass": "pistol",
+      "CatalogVersion": "main",
+      "DisplayName": "Desert Eagle Pistol",
+      "Description": "What is it? How it shoot? Oh, this pierced titanim...",
+      "VirtualCurrencyPrices": {
+        "SC": 5000
+      },
+      "RealCurrencyPrices": null,
+      "Tags": [
+        "pistol",
+        "weapon"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "wood_arrow",
+      "ItemClass": "arrow",
+      "CatalogVersion": "main",
+      "DisplayName": "Wood Arrow",
+      "Description": "Arrow for bow.",
+      "VirtualCurrencyPrices": {
+        "SC": 5
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "arrow",
+        "ammo"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": 1,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": true,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "iron_bolt",
+      "ItemClass": "bolt",
+      "CatalogVersion": "main",
+      "DisplayName": "Iron Bolt",
+      "Description": "Bolt for crossbow.",
+      "VirtualCurrencyPrices": {
+        "SC": 10
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "bolt",
+        "ammo"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": 1,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": true,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "small_heal_potion",
+      "ItemClass": "potion",
+      "CatalogVersion": "main",
+      "DisplayName": "Small Heal Potion",
+      "Description": "Can heal small amount of damage.",
+      "VirtualCurrencyPrices": {
+        "SC": 100
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "potion"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": 1,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": true,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "heal_potion",
+      "ItemClass": "potion",
+      "CatalogVersion": "main",
+      "DisplayName": "Heal Potion",
+      "Description": "Basic heal potion can heal normal damage.",
+      "VirtualCurrencyPrices": {
+        "SC": 200
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "potion"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": 1,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": true,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "big_heal_potion",
+      "ItemClass": "potion",
+      "CatalogVersion": "main",
+      "DisplayName": "Big Heal Potion",
+      "Description": "Heal for full health.",
+      "VirtualCurrencyPrices": {
+        "SC": 300
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "potion"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": 1,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": true,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    }
+  ],
+  "DropTables": []
+}
