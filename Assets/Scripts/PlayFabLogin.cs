@@ -6,12 +6,12 @@ using UnityEngine;
 
 public class PlayFabLogin : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _loginLabel;
+    [SerializeField] private TextMeshProUGUI loginLabel;
     private const string AuthorizedKey = "AuthorizedKey";
 
     private void Start()
     {
-        _loginLabel.text = "Login...";
+        loginLabel.text = "Login...";
         if (string.IsNullOrEmpty(PlayFabSettings.staticSettings.TitleId))
         {
             PlayFabSettings.staticSettings.TitleId = "28CE7";
@@ -34,15 +34,15 @@ public class PlayFabLogin : MonoBehaviour
 
     private void OnLoginSuccess(LoginResult result)
     {
-        _loginLabel.text = "Login is success!";
-        _loginLabel.color = Color.green;
-       Debug.Log("Login is success!"); 
+        loginLabel.text = "Login is success!";
+        loginLabel.color = Color.green;
+       Debug.Log("Login is success!");
     }
 
     private void OnLoginError(PlayFabError error)
     {
-        _loginLabel.text = "Login ERROR!";
-        _loginLabel.color = Color.red;
+        loginLabel.text = "Login ERROR!";
+        loginLabel.color = Color.red;
         var errorMessage = error.GenerateErrorReport();
         Debug.Log(errorMessage);
     }
