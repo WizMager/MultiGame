@@ -22,7 +22,6 @@ public class PlayFabAccountManager : MonoBehaviour
 
     private void DeleteAccount()
     {
-        //TODO: something wrong on delete
         PlayFabServerAPI.DeletePlayer(new DeletePlayerRequest()
         {
             PlayFabId = _playFabId
