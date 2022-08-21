@@ -8,6 +8,10 @@
 // <author>developer@exitgames.com</author>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
+using System.Collections.Generic;
+using PlayFab;
+using PlayFab.ClientModels;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -43,7 +47,12 @@ namespace Photon.Pun.Demo.PunBasics
 
         //True, when the user is firing
         bool IsFiring;
-
+        
+        private const string AuthorizedKey = "AuthorizedKey";
+        private string _playFabId;
+        private const string HealthKey = "HealthKey";
+        private Dictionary<string, string> _health;
+        
         #endregion
 
         #region MonoBehaviour CallBacks
@@ -53,6 +62,7 @@ namespace Photon.Pun.Demo.PunBasics
         /// </summary>
         public void Awake()
         {
+            PlayFabLogin();
             if (this.beams == null)
             {
                 Debug.LogError("<Color=Red><b>Missing</b></Color> Beams Reference.", this);
@@ -80,7 +90,8 @@ namespace Photon.Pun.Demo.PunBasics
         public void Start()
         {
             CameraWork _cameraWork = gameObject.GetComponent<CameraWork>();
-
+            
+            
             if (_cameraWork != null)
             {
                 if (photonView.IsMine)
@@ -110,7 +121,76 @@ namespace Photon.Pun.Demo.PunBasics
             #endif
         }
 
+        private void PlayFabLogin()
+        {
+            if (string.IsNullOrEmpty(PlayFabSettings.staticSettings.TitleId))
+            {
+                PlayFabSettings.staticSettings.TitleId = "28CE7";
+            }
 
+            var needCreation = PlayerPrefs.HasKey(AuthorizedKey);
+            var id = PlayerPrefs.GetString(AuthorizedKey, Guid.NewGuid().ToString());
+        
+            var request = new LoginWithCustomIDRequest
+            {
+                CustomId = id,
+                CreateAccount = needCreation
+            };
+            PlayFabClientAPI.LoginWithCustomID(request, result =>
+            {
+                PlayerPrefs.SetString(AuthorizedKey, id);
+                OnLoginSuccess(result);
+            }, OnLoginError);
+        }
+        
+        private void OnLoginSuccess(LoginResult result)
+        {
+            Debug.Log("Login is success!");
+            _playFabId = result.PlayFabId;
+            SetRobotHealth();
+        }
+
+        private void SetRobotHealth()
+        {
+            _health = new Dictionary<string, string>{{HealthKey, "1"}};
+            PlayFabClientAPI.UpdateUserData(new UpdateUserDataRequest()
+            {
+                Data = _health
+            }, _ => { }, OnLoginError);
+        }
+
+        private void TakeDamage(float damage)
+        {
+            var currentHealth = float.Parse(_health[HealthKey]);
+            currentHealth -= damage;
+            _health[HealthKey] = currentHealth.ToString();
+            PlayFabClientAPI.UpdateUserData(new UpdateUserDataRequest()
+            {
+                Data = _health
+            }, _ => {}, OnLoginError);
+        }
+
+        private float GetHealth()
+        {
+            float health = 0;
+            PlayFabClientAPI.GetUserData(new GetUserDataRequest()
+            {
+                PlayFabId = _playFabId
+            }, result => {
+                if (result.Data.ContainsKey(HealthKey))
+                {
+                    health = float.Parse(result.Data[HealthKey].Value);
+                }
+            }, OnLoginError);
+            return health;
+        }
+    
+        private void OnLoginError(PlayFabError error)
+        {
+            var errorMessage = error.GenerateErrorReport();
+            Debug.Log(errorMessage);
+        }
+        
 		public override void OnDisable()
 		{
 			// Always call the base to remove callbacks
@@ -135,7 +215,7 @@ namespace Photon.Pun.Demo.PunBasics
             {
                 this.ProcessInputs();
 
-                if (this.Health <= 0f)
+                if (GetHealth() <= 0f)
                 {
                     GameManager.Instance.LeaveRoom();
                 }
@@ -168,7 +248,8 @@ namespace Photon.Pun.Demo.PunBasics
                 return;
             }
 
-            this.Health -= 0.1f;
+            //this.Health -= 0.1f;
+            TakeDamage(0.1f*Time.deltaTime);
         }
 
         /// <summary>
@@ -192,7 +273,8 @@ namespace Photon.Pun.Demo.PunBasics
             }
 
             // we slowly affect health when beam is constantly hitting us, so player has to move to prevent death.
-            this.Health -= 0.1f*Time.deltaTime;
+            //this.Health -= 0.1f*Time.deltaTime;
+            TakeDamage(0.1f*Time.deltaTime);
         }
 
 
@@ -274,7 +356,7 @@ namespace Photon.Pun.Demo.PunBasics
             {
                 // We own this player: send the others our data
                 stream.SendNext(this.IsFiring);
-                stream.SendNext(this.Health);
+                stream.SendNext(GetHealth());
             }
             else
             {
