@@ -134,7 +134,7 @@ namespace Photon.Pun.Demo.PunBasics
             var request = new LoginWithCustomIDRequest
             {
                 CustomId = id,
-                CreateAccount = needCreation
+                CreateAccount = !needCreation
             };
             PlayFabClientAPI.LoginWithCustomID(request, result =>
             {
@@ -148,6 +148,7 @@ namespace Photon.Pun.Demo.PunBasics
             Debug.Log("Login is success!");
             _playFabId = result.PlayFabId;
             SetRobotHealth();
+            Health = GetHealth();
         }
 
         private void SetRobotHealth()
@@ -210,12 +211,13 @@ namespace Photon.Pun.Demo.PunBasics
         /// </summary>
         public void Update()
         {
+            Debug.Log(Health);
             // we only process Inputs and check health if we are the local player
             if (photonView.IsMine)
             {
                 this.ProcessInputs();
 
-                if (GetHealth() <= 0f)
+                if (Health <= 0f)
                 {
                     GameManager.Instance.LeaveRoom();
                 }

@@ -406,7 +406,6 @@ GameObject:
   - component: {fileID: 5484970}
   - component: {fileID: 11484610}
   - component: {fileID: 11413802}
-  - component: {fileID: 5594540617017887523}
   m_Layer: 0
   m_Name: My Robot Kyle -done-
   m_TagString: Player
@@ -603,18 +602,6 @@ MonoBehaviour:
     LayerIndex: 0
   - SynchronizeType: 0
     LayerIndex: 1
---- !u!114 &5594540617017887523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 146fa8b5be1d4cf8814e406d010e777d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &100032
 GameObject:
   m_ObjectHideFlags: 0
