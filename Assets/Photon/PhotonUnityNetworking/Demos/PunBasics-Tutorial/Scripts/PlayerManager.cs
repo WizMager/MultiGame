@@ -47,6 +47,13 @@ namespace Photon.Pun.Demo.PunBasics
 
         //True, when the user is firing
         bool IsFiring;
+
+        private float _id;
+        public float Id
+        {
+            get => photonView.ViewID;
+            set => _id = value;
+        }
         
         private const string AuthorizedKey = "AuthorizedKey";
         private string _playFabId;
@@ -359,12 +366,14 @@ namespace Photon.Pun.Demo.PunBasics
                 // We own this player: send the others our data
                 stream.SendNext(this.IsFiring);
                 stream.SendNext(GetHealth());
+                stream.SendNext(Id);
             }
             else
             {
                 // Network player, receive data
                 this.IsFiring = (bool)stream.ReceiveNext();
                 this.Health = (float)stream.ReceiveNext();
+                Id = (float) stream.ReceiveNext();
             }
         }
 
